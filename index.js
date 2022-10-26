@@ -6,6 +6,8 @@ const { YtDlpPlugin } = require("@distube/yt-dlp");
 const config = require("./config");
 const fs = require("fs");
 const client = new Client({
+
+
   partials: [
     Partials.Channel, // for text channel
     Partials.GuildMember, // for guild member
@@ -81,8 +83,8 @@ fs.readdir(config.commandsDir, (err, files) => {
   });
 });
 
-if (config.TOKEN || process.env.TOKEN) {
-  client.login(config.TOKEN || process.env.TOKEN).catch((e) => {
+if (process.env.TOKEN ||"") {
+  client.login(process.env.TOKEN || "").catch((e) => {
     console.log(lang.error1);
   });
 } else {
