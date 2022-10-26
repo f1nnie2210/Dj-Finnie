@@ -83,8 +83,8 @@ fs.readdir(config.commandsDir, (err, files) => {
   });
 });
 
-if (process.env.TOKEN ||"") {
-  client.login(process.env.TOKEN || "").catch((e) => {
+if (config.TOKEN || process.env.TOKEN) {
+  client.login(config.TOKEN || process.env.TOKEN).catch((e) => {
     console.log(lang.error1);
   });
 } else {
