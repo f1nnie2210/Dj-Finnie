@@ -5,6 +5,20 @@ const { SoundCloudPlugin } = require("@distube/soundcloud");
 const { YtDlpPlugin } = require("@distube/yt-dlp");
 const config = require("./config");
 const fs = require("fs");
+// const { Configuration, OpenAIApi } = require("openai");
+
+
+// const configuration = new Configuration({
+//   organization:`org-aoG5gVAHkGIvyWA5j9cTtCAf`,
+//   apiKey: `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`,
+// });
+// const openai = new OpenAIApi(configuration);
+// module.exports = openai;
+// const chatGpt = new ChatGPT({
+//   apiKey: `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`, // get from https://beta.openai.com/account/api-keys
+//   orgKey: `org-aoG5gVAHkGIvyWA5j9cTtCAf`, // get from https://beta.openai.com/account/org-settings
+// });
+
 const client = new Client({
 
 
@@ -18,6 +32,8 @@ const client = new Client({
     GatewayIntentBits.GuildMembers, // for guild members related things
     GatewayIntentBits.GuildIntegrations, // for discord Integrations
     GatewayIntentBits.GuildVoiceStates, // for voice related things
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
   ],
 });
 

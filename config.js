@@ -1,9 +1,9 @@
 module.exports = {
     TOKEN: "",
-    ownerID: "438326468427120661", //discord user id.
+    ownerID: "", //discord user id.
     botInvite: "", //discord bot invite.
     supportServer: "", //discord bot support server invite.
-    mongodbURL: "mongodb+srv://Finnie:221002@cluster0.ysf2puv.mongodb.net/?retryWrites=true&w=majority", //mongodb url.
+    mongodbURL: "", //mongodb url.
     status: '',
     commandsDir: './commands', //Please don't touch
     language: "en", //en

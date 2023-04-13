@@ -41,6 +41,11 @@ const playlist_timer2 = Schema({
   messageID: String,
 });
 
+const blacklists = Schema({
+  guildID: String,
+  words: Array,
+});
+
 module.exports = {
   musicbot: model("musicbot", musicbot),
   loop: model("loop", loop),
@@ -48,4 +53,5 @@ module.exports = {
   playlist: model("playlist", playlist),
   playlist_timer: model("playlist_timer", playlist_timer),
   playlist_timer2: model("playlist_timer2", playlist_timer2),
+  blacklists: model("wordblacklist", blacklists),
 };
