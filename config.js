@@ -1,9 +1,11 @@
+require('dotenv').config();
+
 module.exports = {
-    TOKEN: '',
-    ownerID: '', //discord user id.
+    TOKEN: process.env.TOKEN, //discord bot token.
+    ownerID: process.env.ownerID, //discord user id.
     botInvite: '', //discord bot invite.
     supportServer: '', //discord bot support server invite.
-    mongodbURL: '', //mongodb url.
+    mongodbURL: process.env.mongodbURL, //mongodb url.
     status: '',
     commandsDir: './commands', //Please don't touch
     language: 'en', //en
